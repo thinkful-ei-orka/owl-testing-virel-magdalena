@@ -4,12 +4,11 @@ import store from './store';
 
 export default function chat(props){
     const chat_log = props.chatEvents.map(message=>
-        <div>
-            <p>{message.name}</p>
-            <p>{message.type}</p>
-        </div>);
-    
+        <Messages participantId={message.participantId} type={message.type} message={message.message} time={message.time} timestamp={message.timestamp} />
+    )
     return(
+        <section>
         {chat_log}
+        </section>
     )
 }
