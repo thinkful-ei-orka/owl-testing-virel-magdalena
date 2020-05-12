@@ -9,8 +9,8 @@ export default function participant(props){
     if (props.onStage === true) {
         return (
             <div className="Participant">
-            <img src={props.avatar} alt="avatar" />
-            <h1>{props.name}</h1>
+            <img className="participantImg" src={props.avatar} alt="avatar" />
+            <p>{props.name}</p>
             <p>{stage}</p>
             </div>
         )}
@@ -18,8 +18,8 @@ export default function participant(props){
     
     return (
         <div className="Participant">
-        <img src={props.avatar} alt="avatar" />
-        <h1>{props.name}</h1>
+        <img className="participantImg" src={props.avatar} alt="avatar" />
+        <p>{props.name}</p>
         <p>{session}</p>
         </div>
     )}

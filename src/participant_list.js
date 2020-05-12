@@ -9,7 +9,7 @@ export default function participants(props) {
         <Participant key={person.id} avatar={person.avatar} name={person.name} inSession={person.inSession} onStage={person.onStage} />)
 
     return (
-        <section>
+        <section className="left">
             {people}
         </section>
     )
