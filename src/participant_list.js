@@ -2,14 +2,15 @@ import React from 'react';
 // import store from './store';
 import Participant from './participant';
 
-export default function participants(props){
+export default function participants(props) {
     // let newStore = store.participants.filter(person=> person.inSession===true);
     console.log(props);
-let people = props.participants.map(person =>
-<section><img src={person.avatar} alt='avatar'/><h1>{person.name}</h1><p>{person.inSession}</p></section>);
-    return(
+    let people = props.participants.map(person =>
+        <Participant key={person.id} avatar={person.avatar} name={person.name} inSession={person.inSession} onStage={person.onStage} />)
+
+    return (
         <section>
-            <Participant avatar={participants[0]} />
+            {people}
         </section>
     )
 }
